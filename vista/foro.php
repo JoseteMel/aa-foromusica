@@ -1,6 +1,7 @@
 <?php session_start();
 require_once("../controlador/usuarios_controlador.php");
 require_once("../controlador/temas_controlador.php");
+require_once("../modelo/conexion/db.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,11 +37,7 @@ require_once("../controlador/temas_controlador.php");
     if (isset($_SESSION["USUARIO"])) { ?>
         <input id="nuevo_tema" type="submit" value="NUEVO TEMA" onclick="window.location='nuevo_tema.php';">
     <?php }
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "foro";
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli(HOST, USER, PASS, DBNAME);
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
