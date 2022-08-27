@@ -3,7 +3,7 @@ require_once("controlador/verificar_sesion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/estilo.css">
 
 <head>
     <meta charset="UTF-8">
