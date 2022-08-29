@@ -28,9 +28,9 @@ if(isset($_SESSION["USUARIO"])){
     </nav>
 </header>
 <?php
-if(isset($_GET["registrar"])){
+if(isset($_GET["registrar"])) {
     require_once("registrar.php");
-}else{
+} else {
     ?>
     <section id="formaulario">
         <div id="login">
@@ -48,6 +48,6 @@ if(isset($_GET["registrar"])){
             </form>
         </div>
     </section>
-<?php } ?>
+<?php }?>
 </body>
 </html>
