@@ -7,7 +7,10 @@
 
 body {
     height: 500px;
-    background-color: #aaaa;
+    background-image: url("/img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section {
@@ -59,7 +62,8 @@ nav {
     width: 100%;
     top: 0;
     height: 50px;
-    background-color: #222;
+    background: rgb(2,103,224);
+    background: linear-gradient(180deg, rgba(2,103,224,0.5186449579831933) 0%, rgba(61,153,254,0.6110819327731092) 100%);
     text-align: center;
     z-index: 50;
 }
@@ -84,7 +88,9 @@ header h1 {
 }
 
 .btn-menu:hover {
-    background: #555;
+    background: rgb(0,69,152);
+    background: linear-gradient(180deg, rgba(0,69,152,0.5186449579831933) 0%, rgba(6,69,180,0.5186449579831933) 50%,
+        rgba(0,78,255,0.5186449579831933) 100%);
 }
 
 .ul-menu {
@@ -100,8 +106,7 @@ header h1 {
     display: block;
     width: 300px;
     list-style: none;
-    background-color: #222;
-
+    background-color: rgba(0,121,255,0.5186449579831933);
 }
 
 .ul-menu > li > a {
@@ -111,17 +116,15 @@ header h1 {
     line-height: 40px;
     color: #fff;
     border-top: 1px solid #fff;
-
 }
 
 .ul-menu > li > a:hover {
-    background-color: grey;
-
+    background-color: rgba(2,80,173,0.5186449579831933);
 }
 
 #recuadro {
     margin: 10px 0;
-    background: #f1f1f1;
+    background: rgba(218, 235, 255, 0.57);
     border-radius: 5px;
     box-shadow: -1px 1px 5px 0px #555;
     padding: 20px;
@@ -133,7 +136,7 @@ header h1 {
 
 #login, #index {
     margin: 10px 0;
-    background: #f1f1f1;
+    background: rgba(218, 235, 255, 0.57);
     border-radius: 5px;
     box-shadow: -1px 1px 5px 0px #555;
     padding: 20px;
@@ -209,7 +212,7 @@ input[type=submit]:hover {
 }
 
 .error-form {
-    background-color: rgba(245, 110, 110, 1);
+    background-color: rgba(255, 0, 0, 0.34);
 }
 .warning-form{
     background-color: rgba(245, 250, 110, 1);
@@ -243,14 +246,14 @@ input[type=submit]:hover {
 .tema {
     position: relative;
     height: 100px;
-    background-color: #f1f1f1;
+    background: rgba(218, 235, 255, 0.57);
     padding: 19px 10px;
     margin: 8px 0px;
     border: solid 1px cadetblue;
 }
 
 .tema:hover {
-    background-color: lightblue;
+    background: rgba(160, 199, 255, 0.57);
 }
 
 .tema h3 {
@@ -297,10 +300,11 @@ input[type=submit].editar {
 }
 
 .titulo_tema {
-    background-color: #f1f1f1;
+    background: rgba(148, 176, 217, 0.57);
     height: 60px;
     padding: 0px 10px;
     border: solid 1px cadetblue;
+    border-radius: 10px 10px 0 0;
 }
 
 .titulo_tema h4 {
@@ -312,7 +316,7 @@ input[type=submit].editar {
 .comentario {
     position: relative;
     min-height: 100px;
-    background-color: #f1f1f1;
+    background: rgba(227, 241, 255, 0.57);
     padding: 40px 10px;
     margin: 1px 0;
     border: solid 1px cadetblue;
