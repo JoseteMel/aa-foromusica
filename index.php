@@ -1,5 +1,5 @@
 <?php
-require_once("controlador/verificar_sesion.php");
+require_once("controlador/sesion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,31 +8,26 @@ require_once("controlador/verificar_sesion.php");
 <head>
     <meta charset="UTF-8">
     <title>Foro Música</title>
+    <nav>
+        <label for="check-menu">
+        </label>
+    </nav>
 </head>
 
 <body>
-<header>
-    <h1>Foro Música</h1>
-    <nav>
-        <label for="check-menu">
-            <input id="check-menu" type="checkbox">
-            <div class="btn-menu">Menú</div>
-            <ul class="ul-menu">
-                <li><a href="vista/foro.php">Inicio</a></li>
-                <li><a href="vista/login.php">Acceder</a></li>
-            </ul>
-        </label>
-    </nav>
-</header>
-<section>
-    <div>
-        <h2>¡Bienvenido al foro musical más grande de habla hispana!</h2>
-        <br>
-        <p>Aquí podrás encontrar una gran comunidad en español donde hablar de música, instrumentos, grabación,
-            conciertos y muchas cosas más.</p>
-        <p>¡Nos une la pasión por la música!</p>
-    </div>
-</section>
+    <header>
+        <h1>Foro Música</h1>
+    </header>
+    <section>
+        <div id="index">
+            <h2>¡Bienvenido al foro musical más grande de habla hispana!</h2>
+            <br>
+            <p style="text-align: center">Aquí podrás encontrar una gran comunidad en español donde hablar de música, instrumentos, grabación,
+                conciertos y muchas cosas más.<br>¡Nos une la pasión por la música!</p>
+            <div style='margin-top: 20px'><a href='vista/foro.php'><button class='login_boton'>Ir al foro</a>
+            <a href='vista/login.php'><button class='login_boton' style="margin-left: 20px">Iniciar sesión</a></div>
+        </div>
+    </section>
 </body>
 
 </html>

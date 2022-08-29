@@ -7,7 +7,7 @@
 
 body {
     height: 500px;
-    background-color: #cccccc;
+    background-color: #aaaa;
 }
 
 section {
@@ -131,13 +131,14 @@ header h1 {
     text-align: center;
 }
 
-#login {
+#login, #index {
     margin: 10px 0;
     background: #f1f1f1;
     border-radius: 5px;
     box-shadow: -1px 1px 5px 0px #555;
     padding: 20px;
     justify-content: center;
+    text-align: center;
 }
 
 .title-form {

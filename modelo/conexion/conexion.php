@@ -4,8 +4,8 @@ class Conectar{
 
     public static function Conexion() {
         try {
-            if(file_exists("../modelo/conexion/basededatos.php") || file_exists("modelo/conexion/basededatos.php")) {
-                require_once("basededatos.php");
+            if(file_exists("../modelo/conexion/db.php") || file_exists("modelo/conexion/db.php")) {
+                require_once("db.php");
                 $conexion = new PDO("mysql:host=".HOST."; dbname=".DBNAME,USER,PASS);
                 $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $conexion->exec("SET CHARACTER SET utf8");
@@ -19,7 +19,7 @@ class Conectar{
         }
     }
 
-    public static function Pruebaconexion() {
+    public static function PruebaConexion() {
         try {
             require_once("db.php");
             $conexion = new PDO("mysql:host=".HOST,USER,PASS);
@@ -33,7 +33,7 @@ class Conectar{
     public static function mensajes($e) {
         switch($e) {
             case "2002":
-                if(file_exists("modelo/conexion/basededatos.php")) {
+                if(file_exists("modelo/conexion/db.php")) {
                     return "<p class='error-form'>¡¡Error!! El host no es correcto: (" . $e.")</p>";
                 } else {
                     return "<p class='warning-form'>No se ha podido acceder a la base de datos por un problema en la

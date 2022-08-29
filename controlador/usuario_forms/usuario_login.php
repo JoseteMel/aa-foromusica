@@ -25,9 +25,8 @@ if(!empty($_POST["login"])) {
             $validacion=false;
             header("Location:". $_SERVER['PHP_SELF']."?login=no&campo=$key");
             break;
-            // si el password tiene menos de 8 caracteres...
         } elseif($key == "password" && strlen($value) < $num=8) {
-            $mensaje = '<p class="error-form">El número de carácteres del campo <b>'.$key.'</b> tiene ser mayor 
+            $mensaje = '<p class="error-form">El número de carácteres del campo <b>'.$key.'</b> tiene que ser mayor 
                             que '.$num.'</p>';
             $validacion=false;
             header("Location:". $_SERVER['PHP_SELF']."?login=no&campo=$key");

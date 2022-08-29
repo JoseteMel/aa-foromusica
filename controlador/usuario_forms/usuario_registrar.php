@@ -52,7 +52,7 @@ if(isset($_POST["registrar"])) {
                 break;
             }
         } elseif($key == "password") {
-            if(strlen($value) < $num=6) {
+            if(strlen($value) < $num=8) {
                 $mensaje = '<p class="error-form">El campo <b>'.$key.'</b> debe ser mayor que '.$num.'</p>';
                 $validacion=false;
                 header("Location:". $_SERVER['PHP_SELF']."?registrar=no&campo=$key");

@@ -1,7 +1,8 @@
 <?php session_start();
 require_once("../controlador/usuarios_controlador.php");
 require_once("../controlador/temas_controlador.php");
-require_once("../modelo/conexion/db.php")
+require_once("../modelo/conexion/db.php");
+include("../header.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,24 +39,27 @@ require_once("../modelo/conexion/db.php")
         <input id="nuevo_tema" type="submit" value="NUEVO TEMA" onclick="window.location='nuevo_tema.php';">
     <?php }
     $conn = new mysqli(HOST, USER, PASS, DBNAME);
-    // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT t.ID, t.TITULO, t.FECHA, u.USUARIO FROM temas t INNER JOIN usuarios u ON t.ID_USUARIO = u.ID";
+    $sql = "SELECT t.ID, t.TITULO, t.FECHA, u.USUARIO FROM TEMAS t INNER JOIN USUARIOS u ON t.ID_USUARIO = u.ID";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // output data of each row
         while($row = $result->fetch_array()) { ?>
             <a href='tema.php?pid=<?php echo $row[0]?>'>
                 <div class='tema'><h3><?php echo $row["TITULO"]?></h3>
                     <h5>Creado por <?php echo $row["USUARIO"]. ", " .$row["FECHA"]?></h5></div>
             </a>
         <?php }
+    } elseif (!isset($_SESSION["USUARIO"])) {
+        echo "<div id='index'><br>Todavía no hay ningún tema creado. 
+                Inicia sesión y ¡sé el primero en crear uno!<br>
+                <div><a href='login.php'><button class='login_boton' style='margin-top: 20px'>Iniciar sesión</a></div></div>";
     } else {
-        echo "<br>Todavía no hay ningún tema creado. Inicia sesión y ¡sé el primero en crear uno!";
+        echo "<div id='index'><br>Todavía no hay ningún tema creado. 
+                Inicia sesión y ¡sé el primero en crear uno!<br>";
     }
     $conn->close();
     ?>
